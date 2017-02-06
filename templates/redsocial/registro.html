@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+    {% block contenido %}
+        <div style="position: absolute; left: 500px" class="container">
+            <div class="row">
+                <h1 style="position: absolute; left: -400px; top: 90px">Bienvenido a la nueva red social</h1>
+                <img style="width: 600px; height: 300px; position: absolute; left: -400px; top: 170px" src="../../static/imagenes/logo4.png">
+                <h3 style="position: absolute; left: -400px; top: 490px"> Una nueva forma de comunicarte con tus compañeros</h3> <br>
+                <h3 style="position: absolute; left: -400px; top: 520px"> egresados de tu universidad </h3>
+            </div>
+            <div class="row" >
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Por favor ingrese sus datos para crear tu cuenta</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" method="post">
+                            {% csrf_token %}
+                                <fieldset>
+
+                                    <script>
+                                        $(document).on('ready',function(){
+                                            $.ajax({
+                                                type: "GET"
+                                                contentType:"application/json; charset=utf-8"
+                                                dataType:"json"
+                                                url:"/entities/usuario/"
+                                                success:function(response){
+                                                    consola.log('response')
+                                                }
+                                            })
+                                        });
+                                    </script>
+
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <a href="inicio" class="btn btn-lg btn-success btn-block">Registrar</a>
+                                    <a href="#" class="btn btn-lg btn-success btn-block">Cancelar</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}
