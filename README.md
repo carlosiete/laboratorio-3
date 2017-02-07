@@ -1,1 +1,1 @@
-esto es un readme
+Esto es el archivo readme del proyecto
