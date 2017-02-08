@@ -27,6 +27,8 @@
     <!-- Custom Fonts -->
     <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
     {% block estilos %}
     {% endblock %}
 
@@ -36,7 +38,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
 {% block body %}
@@ -371,7 +374,7 @@
     <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="{% static 'vendor/metisMenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'vendor/metisMenu/metisMenu.js' %}"></script>
 
     <!-- Morris Charts JavaScript -->
     <script src="{% static 'vendor/raphael/raphael.min.js' %}"></script>

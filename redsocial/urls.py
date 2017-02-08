@@ -17,10 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from rest_framework import routers
-from apps.redsocial.views import usuarioViewSet
+from apps.redsocial.views import usuarioViewSet, timeLineViewSet
 
 router = routers.DefaultRouter()
 router.register(r'usuario', usuarioViewSet)
+router.register(r'timeline', timeLineViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

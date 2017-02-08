@@ -1,5 +1,22 @@
 {% extends 'base/base.html' %}
 
+{% block head %}
+
+    <script type="text/javascript">
+        $(document).on('ready',function(){
+            $.ajax({
+                type: "GET",
+                contentType:"application/json; charset=utf-8",
+                dataType:"json",
+                url:"/entities/usuario/",
+                success:function(response){
+                    console.log(response);
+                }
+            });
+        });
+    </script>    
+{% endblock %}
+
 {% block body %}
     {% block contenido %}
         <div style="position: absolute; left: 500px" class="container">
@@ -19,19 +36,7 @@
                             {% csrf_token %}
                                 <fieldset>
 
-                                    <script>
-                                        $(document).on('ready',function(){
-                                            $.ajax({
-                                                type: "GET"
-                                                contentType:"application/json; charset=utf-8"
-                                                dataType:"json"
-                                                url:"/entities/usuario/"
-                                                success:function(response){
-                                                    consola.log('response')
-                                                }
-                                            })
-                                        });
-                                    </script>
+
 
                                     <!-- Change this to a button or input when using this as a form -->
                                     <a href="inicio" class="btn btn-lg btn-success btn-block">Registrar</a>

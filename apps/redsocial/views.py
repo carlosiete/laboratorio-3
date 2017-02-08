@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import HttpResponse
-from apps.redsocial.forms import usuario_form 
 
 from rest_framework import viewsets, status
-from apps.redsocial.models import usuario, comentario, publicacion, canal, area_conocimiento
+from apps.redsocial.models import User, comentario, publicacion, canal, area_conocimiento
 from apps.redsocial.serializers import publicacionSerializer, usuarioSerializer, canalSerializer, area_conocimientoSerializer, comentarioSerializer
 from rest_framework.response import Response
 import json
@@ -25,5 +24,35 @@ def registroView(request):
 
 
 class usuarioViewSet(viewsets.ModelViewSet):
-	queryset = usuario.objects.all()
+	queryset = User.objects.all()
 	serializer_class = usuarioSerializer
+
+class timeLineViewSet(viewsets.ModelViewSet):
+	queryset = publicacion.objects.all()
+	serializer_class = publicacionSerializer
+
+	def update(self, request, pk=None):
+		pass
+
+	def create(self, request):
+		json_data = json.loads(request.body)
+
+		username = json_data['username']
+
+		user = None
+		error_message = ''
+        
+		try:
+			user = User.objects.get(username=username)
+        
+		except Exception as e:
+			error_message = str(e)
+
+		if (user != None):
+			new_post = publicacion()
+			new_post.contentido = json_data['contenido']
+			new_post.usuario = user
+			new_post.save()
+			return Response({'ok' : 'true'})
+		else:
+			return Response({'ok' : 'false', 'error' : error_message},status=status.HTTP_500_INTERNAL_SERVER_ERROR)				
