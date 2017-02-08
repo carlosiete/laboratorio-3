@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'redsocial',
-        'USER': 'carlos',
-        'PASSWORD': '123456',
+        'USER': 'postgres',
+        'PASSWORD': 'familia2016',
         'HOST': 'localhost',
         'PORT': 5432,
     }
