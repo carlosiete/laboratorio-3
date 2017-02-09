@@ -26,6 +26,18 @@ def registroView(request):
 class usuarioViewSet(viewsets.ModelViewSet):
 	queryset = User.objects.all()
 	serializer_class = usuarioSerializer
+	def create_auth(request):
+		serialized = UserSerializer(data=request.DATA)
+		if serialized.is_valid():
+			User.objects.create_user(
+				serialized.init_data['email'],
+				serialized.init_data['username'],
+				serialized.init_data['password']
+			)
+
+			return Response(serialized.data, status=status.HTTP_201_CREATED)
+		else:
+			return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)		
 
 class timeLineViewSet(viewsets.ModelViewSet):
 	queryset = publicacion.objects.all()
