@@ -6768,6 +6768,19 @@ button.close {
   height: 120px;
 }
 
+.img-post
+{
+  border-style: solid;
+  align-items: center;
+  border-color: #f8ff;
+  border-radius: 50% 50%;
+  position: relative;
+  margin: 20px 60px;
+  right: 60px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+}
 /*Registro de usuario*/
 .div-registro
 {
@@ -6802,5 +6815,6 @@ button.close {
   left:0px; top:40px; 
   z-index:10 !important
 }
+
   
 /*# sourceMappingURL=bootstrap.css.map */

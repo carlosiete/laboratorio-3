@@ -6,6 +6,8 @@ from apps.redsocial.views import inicioView
 from apps.redsocial.views import usuarioViewSet
 from apps.redsocial.views import usuarioViewSet
 from apps.redsocial.views import timeLineViewSet
+from apps.redsocial.views import compañerosView
+
 from rest_framework import routers
 
 
@@ -18,5 +20,7 @@ urlpatterns = [
     url(r'registro', registroView),
     url(r'flot',flotView),
     url(r'inicio', inicioView),
+    url(r'compañeros', compañerosView),
+
 
 ]

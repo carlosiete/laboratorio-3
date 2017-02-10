@@ -20,6 +20,8 @@ def inicioView(request):
 
 def registroView(request):
 		return render(request, 'redsocial/registro.html')
+def compañerosView(request):
+		return render(request, 'redsocial/compañeros.html')		
 
 
 
