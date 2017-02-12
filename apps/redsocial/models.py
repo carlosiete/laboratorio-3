@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class area_conocimiento(models.Model):
 	descripcion = models.TextField()
-	estatus = models.TextField(max_length=1)
+	estatus = models.BooleanField(max_length=1)
 
 """class usuario(models.Model):
 	id_usuario = models.TextField(primary_key=True)
@@ -24,10 +24,17 @@ class perfil(models.Model):
 	telefono = models.TextField(max_length=11)
 	fecha_nacimiento = models.DateField()
 	imagen = models.ImageField(null=True)
-	area = models.ManyToManyField(area_conocimiento)    	
+	area = models.ManyToManyField(area_conocimiento)
+
+class canal(models.Model):
+	usuario = models.ForeignKey(User, editable=True, related_name='canal')
+	descripcion = models.TextField()
+	estatus = models.TextField(max_length=1)
+	area = models.ManyToManyField(area_conocimiento)	    	
 
 class publicacion(models.Model):
 	usuario = models.ForeignKey(User, editable=True, related_name='publicacion')
+	canal = models.TextField(null=True)
 	contenido = models.TextField()
 	fecha = models.DateTimeField(auto_now_add=True)
 	tipo = models.TextField()
@@ -38,13 +45,11 @@ class comentario(models.Model):
 	contenido = models.TextField()
 	fecha = models.DateTimeField(auto_now_add=True)	
 
-class canal(models.Model):
-	usuario = models.ForeignKey(User, editable=True, related_name='canal')
-	descripcion = models.TextField()
-	estatus = models.TextField(max_length=1)
-	area = models.ManyToManyField( area_conocimiento)
-
 class seguimiento(models.Model):
 	seguidor = models.TextField()
 	seguido = models.TextField()
+
+class like(models.Model):
+	usuario = models.ForeignKey(User, editable=True, related_name='usuario')
+	publicacion = models.ForeignKey(publicacion, editable=True, related_name='like')		
 

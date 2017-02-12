@@ -1,13 +1,12 @@
 from rest_framework import serializers
-from apps.redsocial.models import area_conocimiento, User, publicacion, comentario, canal, perfil
+from apps.redsocial.models import area_conocimiento, User, publicacion, comentario, canal, perfil, seguimiento
 
 
 
 class usuarioSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = User
-		fields = ('first_name','last_name','email','password')
-		ordering = ('-created',)
+		fields = ('id','username','first_name','last_name','email','password')
 
 class perfilSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -17,12 +16,12 @@ class perfilSerializer(serializers.ModelSerializer):
 class area_conocimientoSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = area_conocimiento
-		fields = ('descripcion','estatus')
+		fields = ('id','descripcion', 'estatus')
 
 class publicacionSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = publicacion
-		fields = ('usuario','contenido','fecha','tipo')
+		fields = ('usuario','canal','contenido','fecha','tipo')
 		ordering = ('-created',)	
 
 class comentarioSerializer(serializers.ModelSerializer):
@@ -34,4 +33,9 @@ class comentarioSerializer(serializers.ModelSerializer):
 class canalSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = canal
-		fields = ('usuario','descripcion','estatus')					
+		fields = ('usuario','descripcion','area')
+
+class seguimientoSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = seguimiento
+		fields = ('seguidor', 'seguido')							

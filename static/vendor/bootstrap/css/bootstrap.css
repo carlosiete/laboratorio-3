@@ -6816,5 +6816,108 @@ button.close {
   z-index:10 !important
 }
 
-  
+/*hechos por eddo*/
+.enviar
+{
+  color: #fff;
+  background-color: rgb(56,145,142);
+  border-color: rgb(56,145,142);
+}
+
+.img-chat
+{
+  height: 15%;
+  width: 15%;
+  border-radius: 50%;
+  border: solid 1%;
+  border-color: black;
+  border-width: 1%;
+  position: relative;
+  float: left;
+  padding: 0.4%;
+  margin: 2%;
+}
+
+.cto
+{
+  width: 80%;
+  position: relative;
+  float: left;
+}
+
+.tres
+{
+  position: fixed-relative;
+  padding: 2%;
+  margin-left: 1%;
+  margin-right: 8%;
+  float: left;
+}
+
+.cuatro
+{
+  width: 80%;
+}
+
+.ct
+{
+  margin-left:  8%;
+  position: relative;
+}
+
+.cdo-img
+{
+  width: 20%;
+}
+
+.img-tabla
+{
+  padding: 2%;
+  width: 150px;
+  height: 150px;
+  border:solid 1px black;
+  margin: 10px 10px;
+  border-radius: 15%;
+  height: 100px;
+}
+
+.izquierda
+{
+  width: 45%;
+  float: left;
+  position: relative;
+  margin-left: 2%;
+}
+
+.derecha
+{
+  width: 45%;
+  float: right;
+  position: relative;
+  margin-right: 2%;
+}
+ 
+.dos
+{
+    color: black;
+}
+
+.uno
+{
+  float: center;
+  position: relative;
+  width: 100%;
+  background-color: rgb(56,145,142);
+  border-style: solid 2px;
+  border-color: black;
+  padding: 0.3%;
+}
+
+.chat-panel{
+  margin: 15px;
+  width: 50%;
+  margin-left: 375px;
+  position: fixed;
+  background: #fff;
+ } 
 /*# sourceMappingURL=bootstrap.css.map */

@@ -39,8 +39,28 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.redsocial',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'apps.seducla',
 
     ]
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
+    'DEFAULT_AUTHENTICATION_CLASSES' : ('rest_framework.authentication.TokenAuthentication',),
+    'PAGE_SIZE': 10
+}
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,7 +104,15 @@ DATABASES = {
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': 5432,
-    }
+    },
+    'seducla': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'seducla',
+        'USER': 'carlos',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': 5432,
+    }    
 }
 
 

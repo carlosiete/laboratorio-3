@@ -229,10 +229,7 @@
                             <a href="index.html"><i class="fa fa-book fa-fw"></i> <b>Amigos</b><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Seguidos</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Seguidores</a>
+                                    <a href="seguidores"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Mis amigos</a>
                                 </li>                               
                             </ul>
                             <!-- /.nav-second-level -->
@@ -241,10 +238,7 @@
                             <a href="index.html"><i class="fa fa-inbox fa-fw" aria-hidden="true"></i> <b>Mensajes</b><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Nuevo</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Inbox</a>
+                                    <a href="inbox"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Inbox</a>
                                 </li>                               
                             </ul>
                             <!-- /.nav-second-level -->
@@ -253,7 +247,7 @@
                             <a href="index.html"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i><b>Configuraciones</b><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Editar Perfil</a>
+                                    <a href="editar"><i class="fa fa-chevron-circle-right fa-fw" aria-hidden="true"></i>Editar Perfil</a>
                                 </li>                               
                             </ul>
                             <!-- /.nav-second-level -->
@@ -304,9 +298,9 @@
 
 
     {% block contenido %}
-        {% endblock %}
+    {% endblock %}
     
-        {% endblock %}
+{% endblock %}
 
     </div>
     <!-- /#wrapper -->
@@ -327,6 +321,24 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
+
+
+
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'vendor/metisMenu/metisMenu.min.js' %}"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{% static 'vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables-plugins/dataTables.bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables-responsive/dataTables.responsive.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>    
 
     {% block js %}
 
