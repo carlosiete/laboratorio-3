@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}  
+   
+   {% block contenido %}
+   	<div class="chat-panel panel panel-default ">
+
+                <div class="panel-heading">
+                    <i class="" aria-hidden="true"></i>Escriba su Mensaje
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-refresh fa-fw"></i> Refresh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-check-circle fa-fw"></i> Available
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-times fa-fw"></i> Busy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-clock-o fa-fw"></i> Away
+                                </a>
+                            </li>	
+                          
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <ul class="chat">
+                        
+                        <div>
+                           <input id="btn-input" type="text" class="form-control input-sm cto" placeholder="Seleccione su Contacto" />
+                        </div>
+                        <li class="divider"></li>
+                        <li class="divider"></li>
+                        <div>
+                            <input id="btn-input" type="row" class="form-control input-sm" placeholder="Mensaje" />
+                            
+                        </div>
+                        <li class="divider"></li>
+                        <div class="input-group">
+                            
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                                Enviar
+                                </button>
+                            </span>
+                        </div>
+                    </ul>
+                </div>
+    </div>
+   {% endblock %}

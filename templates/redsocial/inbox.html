@@ -1,0 +1,183 @@
+{% extends 'base/base.html' %}
+    {% block contenido %}
+        <div class="chat-panel panel panel-default ">
+
+                        <div class="panel-heading">
+                            <i class="fa fa-inbox fa-fw" aria-hidden="true"></i>  <b>Mensajes</b>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-check-circle fa-fw"></i> Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-times fa-fw"></i> Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-clock-o fa-fw"></i> Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="tres">
+                            <ul>
+                                    <ul class="chat">
+                        
+                                        <div>
+                                            <Label class="dos"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Nuevo Mensaje</label>
+                                            <div class="input-group custom-search-form" align = "center" >
+                                                    <input type="text" class="form-control cuatro" placeholder="Para:">
+                                                    <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <li class="divider"></li>
+                                            <div class="input-group">
+                                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Mensaje" />
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                                Enviar
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </ul>
+                        </div>
+                        <div class="ct" >
+                            <li class="divider"></li>
+                            <Label class="dos"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Recibidos</label>
+                            <li class="divider"></li>
+                        </div>
+                        
+                        <div class="panel-body">
+                            
+                            <ul class="chat">
+                                <li>
+                                    <span class="">
+                                            <img src="../../static/imagenes/prueba.png" alt="User Avatar" class="img-chat" />
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <div class="chat-body clearfix dos">
+                                                <div class="header">
+                                                    <strong class="primary-font">Jack Sparrow</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                                    </small>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
+                                            </div>                                    
+                                        </li>
+                                        <li class="panel-heading uno">
+                                            <a href="#" class="dos" >Responder <span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level enviar">
+                                                    <div class="input-group">
+                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Mensaje" />
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                                Enviar
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <span class="">
+                                            <img src="../../static/imagenes/prueba.png" alt="User Avatar" class="img-chat" />
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <div class="chat-body clearfix dos">
+                                                <div class="header">
+                                                    <strong class="primary-font">Jack Sparrow</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                                    </small>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
+                                            </div>                                    
+                                        </li>
+                                        <li class="panel-heading uno">
+                                            <a href="#" class="dos" >Responder <span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level enviar">
+                                                    <div class="input-group">
+                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Mensaje" />
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                                Enviar
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <span class="">
+                                            <img src="../../static/imagenes/prueba.png" alt="User Avatar" class="img-chat" />
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <div class="chat-body clearfix dos">
+                                                <div class="header">
+                                                    <strong class="primary-font">Jack Sparrow</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                                    </small>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
+                                            </div>                                    
+                                        </li>
+                                        <li class="panel-heading uno">
+                                            <a href="#" class="dos" >Responder <span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level enviar">
+                                                    <div class="input-group">
+                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Mensaje" />
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                                Enviar
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+        </div>
+
+
+            
+
+    {% endblock %}
+
